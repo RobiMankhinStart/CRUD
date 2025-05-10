@@ -6,6 +6,9 @@ const initialState = [
 const nameSlice = createSlice({
   name: "nameSlice",
   initialState: initialState,
-  //   reducers:
+  reducers: {
+    // addContact: (state, action) => {
+    //   }
+  },
 });
 export default nameSlice.reducer;
