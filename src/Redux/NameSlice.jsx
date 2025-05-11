@@ -22,7 +22,15 @@ const nameSlice = createSlice({
     removeContact: (state, action) => {
       return (state = state.filter((item) => item.id != action.payload));
     },
+    UpdateContact: (state, action) => {
+      const receivedObject = state.find((item) => item.id == action.payload.id);
+
+      if (receivedObject) {
+        (receivedObject.name = action.payload.name),
+          (receivedObject.email = action.payload.email);
+      }
+    },
   },
 });
-export const { addContact, removeContact } = nameSlice.actions;
+export const { addContact, removeContact, UpdateContact } = nameSlice.actions;
 export default nameSlice.reducer;

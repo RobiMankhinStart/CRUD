@@ -41,7 +41,7 @@ const Home = () => {
               </td>
               <td className="py-2 px-4 border-b border-gray-200 flex gap-2">
                 <Link
-                  to="/update"
+                  to={`/update/${value.id}`}
                   className="text-blue-700  hover:bg-blue-600 hover:text-white border border-blue-700 transition rounded duration-150 px-2 py-1 font-medium"
                 >
                   Update
