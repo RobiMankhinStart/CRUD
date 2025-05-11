@@ -1,15 +1,23 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { removeContact } from "../Redux/NameSlice";
 
 const Home = () => {
+  const dispatch = useDispatch();
   const contacts = useSelector((state) => state.first);
   return (
     <div className="mt-10">
       <h2 className="text-center text-2xl font-bold text-zinc-600">
         Let's CRUD
       </h2>
-      <table className="mt-6 mx-auto min-w-[600px] border border-gray-300 shadow-md rounded-lg overflow-hidden">
+      <Link
+        className="ml-[460px] font-semibold text-2xl mt-12 p-2 rounded-md flex w-[200px] justify-center text-white shadow-lg bg-blue-500 ease-linear transition-all delay-100 hover:bg-white border hover:border-blue-700 hover:text-blue-700 "
+        to="/create"
+      >
+        Create +
+      </Link>
+      <table className="mt-3 mx-auto min-w-[600px] border border-gray-300 shadow-md rounded-lg overflow-hidden">
         <thead>
           <tr className="bg-gray-200 text-left text-gray-700 uppercase text-sm">
             <th className="py-3 px-4 border-b border-gray-300">ID</th>
@@ -22,7 +30,7 @@ const Home = () => {
           {contacts.map((value) => (
             <tr
               key={value.id}
-              className="hover:bg-gray-50 transition-colors duration-200"
+              className="hover:bg-gray-100 transition-colors duration-200"
             >
               <td className="py-2 px-4 border-b border-gray-200">{value.id}</td>
               <td className="py-2 px-4 border-b border-gray-200">
@@ -38,8 +46,11 @@ const Home = () => {
                 >
                   Update
                 </Link>
-                <button className="text-red-600 hover:text-white hover:bg-red-500 border border-red-500 px-2 py-1 rounded transition duration-150">
-                  Delete
+                <button
+                  onClick={() => dispatch(removeContact(value.id))}
+                  className="text-red-600 hover:text-white hover:bg-red-500 border border-red-500 px-2 py-1 rounded transition duration-150"
+                >
+                  Remove
                 </button>
               </td>
             </tr>
