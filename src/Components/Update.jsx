@@ -21,18 +21,18 @@ const Update = () => {
     navigate("/");
   };
   return (
-    <div className="bg-slate-100 h-screen p-1">
-      <h2 className="mt-[100px] pb-2 border-4 border-slate-100 w-[250px] mx-auto border-b-gray-500 text-center text-3xl font-bold text-zinc-600">
+    <div className="bg-yellow-600 h-screen p-1">
+      <h2 className=" mt-8 md:mt-[100px] pb-2 border-4 border-yellow-600 w-[250px] mx-auto border-b-gray-300 text-center text-3xl font-bold text-white">
         Update
       </h2>
-      <h3 className="mt-6 border-4 w-[250px] border-slate-100 mx-auto text-center text-3xl font-bold text-zinc-600">
+      <h3 className="mt-6 border-4 w-[250px] border-yellow-600 mx-auto text-center text-3xl font-bold text-white">
         ID : {id}
       </h3>
       <form
         onSubmit={handleUpdate}
-        className="bg-yellow-400 mt-4 p-8 w-[450px] rounded-xl mx-auto shadow-lg flex flex-col gap-8 justify-center items-center"
+        className="bg-yellow-400  mt-4 p-8 md:w-[450px] rounded-xl mx-auto shadow-lg flex flex-col gap-8 justify-center items-center"
       >
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-col md:flex-row md:gap-2 md:items-center">
           <label className="text-lg font-semibold text-gray-700" htmlFor="name">
             Name :
           </label>
@@ -45,7 +45,7 @@ const Update = () => {
             placeholder="Enter Name...."
           />
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-col md:flex-row md:gap-2 md:items-center">
           <label
             className="text-lg  font-semibold text-gray-700"
             htmlFor="email"

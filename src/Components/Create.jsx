@@ -16,14 +16,14 @@ const Create = () => {
   };
   return (
     <div className="bg-slate-200 h-screen p-1">
-      <h2 className="mt-[100px] pb-2 border-4 w-[250px] mx-auto border-b-gray-500 text-center text-3xl font-bold text-zinc-600">
+      <h2 className="md:mt-[100px] mt-[30px] pb-2 border-4 w-[250px] mx-auto border-b-gray-500 text-center text-3xl font-bold text-zinc-600">
         Creation
       </h2>
       <form
         onSubmit={handleSubmit}
-        className="bg-blue-300 mt-10 p-8 w-[450px] rounded-xl mx-auto shadow-lg flex flex-col gap-8 justify-center items-center"
+        className="bg-blue-300  mt-10 p-8 md:w-[450px] rounded-xl mx-auto shadow-lg flex flex-col gap-8 justify-center items-center"
       >
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-col md:flex-row md:gap-2 md:items-center">
           <label className="text-lg font-semibold text-gray-700" htmlFor="name">
             Name :
           </label>
@@ -36,7 +36,7 @@ const Create = () => {
             placeholder="Enter Name...."
           />
         </div>
-        <div className="flex gap-2 items-center">
+        <div className="flex flex-col md:flex-row md:gap-2 md:items-center">
           <label
             className="text-lg  font-semibold text-gray-700"
             htmlFor="email"
