@@ -1,12 +1,42 @@
-# React + Vite
+# React CRUD + Search App ✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple, clean and functional **CRUD (Create, Read, Update, Delete)** application built with **React** and **Redux Toolkit**. 
+It also includes a **search** functionality to filter the displayed data dynamically.
+---
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📝 Create new items
+- 📋 View all items in a list
+- ✏️ Edit existing items
+- 🗑️ Delete items
+- 🔍 **Search** functionality to filter items by keyword
+- 🔄 State management via **Redux Toolkit**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend**: React (Functional Components)
+- **State Management**: Redux Toolkit (RTK)
+- **Styling**: CSS / Tailwind 
+
+---
+
+## 🖼️ Screenshots
+
+| Home View | Add/Edit | Update | Search in Action |
+|-----------|----------|------------------|
+| ![home](./screenshots/Screenshot_home.png) | ![form](./screenshots/Screenshot_creation.png) | ![search](./screenshots/Screenshot_update.png) | ![search](./screenshots/Screenshot_search.png) |
+
+---
+
+## ▶️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/RobiMankhinStart/CRUD.git
+cd CRUD
+npm install
+npm run dev
